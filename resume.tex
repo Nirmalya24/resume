@@ -1,0 +1,264 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage[most]{tcolorbox}
+
+
+% Set the margins
+\geometry{left=1.5cm, top=0.8cm, right=1.5cm, bottom=0.2cm}
+
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\normalsize
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \hspace{-3mm}{#1}:\hspace{1mm} & \hspace*{0pt}\hfill{\footnotesize{ #3}} \vspace{-0.5mm}\\ \hspace{-2.9mm}#2 
+    \end{tabular*}
+    \vspace{0mm}
+}
+
+\newcommand{\resumeExp}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1.2mm}\\
+        \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-6.1mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1mm}
+    \end{tabular*}
+    \vspace{-7.5mm}
+}
+
+\newcommand{\resumeEdu}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.3mm} \small\textbf{#1} & \footnotesize{#3}\vspace{-1mm} \\
+        \hspace{-4.3mm} \footnotesize{#2} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-3.2mm}
+}
+
+\newcommand{\resumeAchieve}[3] {
+\hspace{-3.1mm}\textbf{ #1} & {#2} & \hspace{3mm}\footnotesize{#3}
+\vspace{0mm}\\
+}
+
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=-2.5mm]}
+
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-1.5mm}}
+
+\renewcommand{\arraystretch}{1}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+
+\newcommand{\myName}{Nirmalya Ghosh} % Your Name
+\newcommand{\myPhone}{206-665-9147} %Phone
+\newcommand{\myEmail}{nirmalya.ghosh@teradata.com} %Email
+\newcommand{\myLinkedin}{https://www.linkedin.com/in/nirmalyagh/} %LinkedIn
+\newcommand{\myGitHub}{https://github.com/Nirmalya24/} %GitHub
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+
+%----------HEADING-----------------
+\begin{center}
+    \LARGE{\textbf{\myName}}
+\end{center}
+\vspace{-4.5mm}
+\begin{center}
+    \small
+     { \faPhone\hspace{0.2mm} \myPhone} 
+    | { \href{mailto:\myEmail}{\faEnvelope\hspace{0.2mm} \myEmail} }
+    | { \href{\myLinkedin}{\faIcon{linkedin}\hspace{0.5mm} nirmalyagh} }
+    | { \href{\myGitHub}{\faIcon{github} Nirmalya24} }
+    | { \faMapMarker\space Seattle, WA } 
+\end{center}
+\vspace{-3mm}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+
+% Senior Cloud Services Engineer
+\resumeSubHeadingListStart
+\resumeEdu{\color{teal} {Teradata}}{Seattle, WA - Remote}{\color{teal}{Senior Cloud Services Engineer}}{Mar 2026 - Present}
+\resumeItemListStart
+\vspace{-3.5mm}
+
+\item[$\bullet$] \textbf{Architect and lead delivery} of core cloud control-plane services across \textbf{AWS, Azure, and GCP}, driving elastic scalability and on-demand provisioning, and disaster-recovery capabilities for Teradata's managed cloud offerings.
+
+\item[$\bullet$] \textbf{Spearhead cross-cloud Private Service Connect (PSC) automation}, designing subnet allocation strategies and forwarding-rule lifecycle management that reduced manual provisioning effort by over \textbf{60\%}.
+
+\item[$\bullet$] \textbf{Lead fleet-wide OS configuration and certificate distribution} across GCP VM fleets using OS Config Agent and Policy Orchestration, ensuring consistent TLS trust anchors across hundreds of nodes with zero manual intervention.
+
+\item[$\bullet$] \textbf{Design and implement multi-interface networking} on SUSE Linux (SLES) VMs, resolving complex Cloud NAT, route-table, and DNS conflicts in multi-tenant architectures spanning multiple cloud regions.
+
+\item[$\bullet$] \textbf{Define technical direction and mentor} junior and mid-level engineers on Terraform IaC patterns, GCP networking, and secure-by-default infrastructure design principles, improving team velocity and code quality.
+
+\item[$\bullet$] \textbf{Drive cross-team collaboration} with security, platform, and application engineering teams to align infrastructure changes with compliance and operational requirements across multi-cloud environments.
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% Cloud Services Engineer
+\vspace{-6mm}
+\resumeSubHeadingListStart
+\resumeEdu{\color{teal} {Teradata}}{Seattle, WA - Remote}{\color{teal}{Cloud Services Engineer}}{Jan 2024 - Mar 2026}
+\resumeItemListStart
+\vspace{-3.5mm}
+
+\item[$\bullet$] Developed and owned the \textbf{Kubernetes}-level, multi-cloud \textbf{Network Service}, delivering essential networking capabilities like \textbf{IP whitelisting}, GCP subnet creation, \textbf{Express Route}, and \textbf{VPN connectivity}.
+
+\item[$\bullet$] Built a plugin-based \textbf{credential rotation service} using the Template Method design pattern in Python, integrating with \textbf{HashiCorp Vault} to automate rotation for Valtix API keys and GCP service account keys --- reducing credential downtime incidents by \textbf{75\%} and strengthening security compliance.
+
+\item[$\bullet$] Designed and implemented network-related \textbf{Terraform} configurations to support and extend Network Service features, ensuring seamless integration and consistent infrastructure automation across multi-cloud platforms.
+
+\item[$\bullet$] Executed \textbf{Terraform state migration} from GitLab to AWS S3 backends across staging, pre-prod, and production environments, establishing durable remote state with DynamoDB locking.
+
+\item[$\bullet$] Configured and maintained \textbf{CI/CD pipelines} using \textbf{GitHub Actions} and \textbf{JFrog Artifactory}, enabling reliable artifact promotion and reproducible infrastructure deployments.
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% Summer 23 Teradata Internship
+\vspace{-6mm}
+\resumeSubHeadingListStart
+\resumeEdu{\color{teal} {Teradata}}{Seattle, WA - Remote}{\color{teal}{Cloud Software Engineer Intern}}{June 2023 - December 2023}
+\resumeItemListStart
+\vspace{-3.5mm}
+
+\item[$\bullet$] Built a \textbf{Network Performance Evaluation Microservice} for SREs to detect and diagnose network issues, cutting resolution time by \textbf{40\%} and improving operational efficiency by \textbf{30\%}
+\item[$\bullet$] Developed \textbf{AWS Lambda functions} in Python with \textbf{Terraform} to automate VM provisioning across AWS and Azure, reducing manual provisioning time by \textbf{50\%} and human error by \textbf{40\%}
+\item[$\bullet$] Extended a \textbf{FastAPI} microservice to support AWS and Azure Capacity Reservation Groups (reducing infrastructure costs by \textbf{15\%}) and expanded product availability to Azure \emph{westus} and \emph{westeurope}, growing the user base by \textbf{25\%}
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% Summer 22 Teradata Internship
+\vspace{-6mm}
+\resumeSubHeadingListStart
+\resumeEdu{\color{teal} {Teradata}}{Seattle, WA - Remote}{\color{teal}{Cloud Software Engineer Intern}}{June 2022 - September 2022}
+\resumeItemListStart
+\vspace{-3.5mm}
+\item[$\bullet$] Built a \textbf{FastAPI} service using \textbf{Boto3} to query AWS Service Quotas and compute utilization metrics, serving as a pre-check gate for customer cloud provisioning
+\item[$\bullet$] Developed automated \textbf{end-to-end API tests} with \textbf{Postman} integrated into \textbf{GitLab CI/CD}, validating functionality, performance, and reliability
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\vspace{-7mm}
+
+%-----------PROJECTS-----------------
+\section{Personal Projects}
+
+\resumeSubHeadingListStart
+\resumeProject
+{\color{teal} {LetsGoSEA Web Application} 
+| \href{https://5110csi.azurewebsites.net/}{\faIcon{external-link-alt} \hspace{0.5mm} Azure} 
+| \href{https://github.com/zwang4-code/TheCSharpInvestigators} {\faIcon{github}} } {} {ASP.NET, C\#, Razor, Javascript, Bootstrap CSS, NUnit} 
+
+\resumeItemListStart
+\vspace{-1mm}
+\item[$\bullet$] Created a \textbf{full-stack} web application that allows users to explore beautiful Seattle neighborhoods
+\item[$\bullet$] Implemented \textbf{RESTful APIs} with \textbf{CRUD} features including rate, comment, and upload/delete images. 
+\item[$\bullet$] Integrated \textbf{Google Map API} to display neighborhood location. Conducted defensive programming in test-driven development and achieved \textbf{100\% code coverage} 
+\resumeItemListEnd
+\vspace{0mm}
+
+\resumeProject
+{\color{teal} {Maze Runner} 
+| \href{https://github.com/Nirmalya24/maze-runner}{\faIcon{github}} } {} {Python, Socket, Multithreading}
+
+\resumeItemListStart
+\vspace{-1mm}
+\item[$\bullet$] \textbf{Led} development of a multiplayer maze runner game for users to compete against each other to finish a random maze
+\item[$\bullet$] Managed authentication, query handling, and data transfer with \textbf{Socket}, \textbf{TCP/IP, and RPCs}. Implemented multiplayer concurrency using \textbf{thread pool and mutex lock}. 
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+
+\vspace{-7mm}
+\section{Education}
+
+
+\resumeSubHeadingListStart
+\resumeEdu
+{Master of Science: Computer Science (Software Engineering)}
+{Seattle University} 
+{December 2023}
+{Seattle, WA}
+\vspace{-2.0mm}
+\resumeItemListStart
+\item[$\bullet$] Award: Winner of ACM Club Project Competition, Winter '21, Werewolf Online Game
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\vspace{-6.0mm}
+
+\resumeSubHeadingListStart
+\resumeEdu
+{Bachelor of Arts: Geography}
+{University of Washington} 
+{Sept 2016 - Mar 2020}
+{Seattle, WA}
+\vspace{-2.0mm}
+\resumeItemListStart
+\item[$\bullet$] Award: Senior Year Dean's List
+\item[$\bullet$] Leadership: Community Manager - Plenum (Undergraduate Geography Research Journal)
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\vspace{-7mm}
+
+%-----------SKILLS-----------------
+\section{Skills}
+
+\begin{itemize}[left=0pt, itemsep=-1mm]\small
+    \item Python, FastAPI, REST API, Docker, Kubernetes, Terraform, HashiCorp Vault, Cloud Architecture \& Orchestration, AWS (Lambda, S3, EC2, APIGateway, DynamoDB, Route53), Azure (VNet, Express Route, AKS), GCP (GKE, Cloud NAT, PSC), GitHub Actions, JFrog Artifactory, Shell Scripting, Javascript, ReactJS, NodeJS, C++, PostgreSQL, MySQL, Git, Linux
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}
