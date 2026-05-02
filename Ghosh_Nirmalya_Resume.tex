@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage{latexsym}
 \usepackage{xcolor}
 \usepackage{float}
@@ -23,13 +23,13 @@
 
 
 % Set the margins
-\geometry{left=1.5cm, top=0.8cm, right=1.5cm, bottom=0.2cm}
+\geometry{left=1.8cm, top=1cm, right=1.8cm, bottom=0.5cm}
 
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\normalsize
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 %-------------------------
 % Custom commands
@@ -76,9 +76,9 @@
 
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=-2.5mm]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=-1.5mm]}
 
-\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=1pt]\small}
 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-1.5mm}}
@@ -94,7 +94,6 @@
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%
 
 \newcommand{\myName}{Nirmalya Ghosh} % Your Name
-\newcommand{\myPhone}{206-665-9147} %Phone
 \newcommand{\myEmail}{nirmalya.ghosh@teradata.com} %Email
 \newcommand{\myLinkedin}{https://www.linkedin.com/in/nirmalyagh/} %LinkedIn
 \newcommand{\myGitHub}{https://github.com/Nirmalya24/} %GitHub
@@ -110,8 +109,7 @@
 \vspace{-4.5mm}
 \begin{center}
     \small
-     { \faPhone\hspace{0.2mm} \myPhone} 
-    | { \href{mailto:\myEmail}{\faEnvelope\hspace{0.2mm} \myEmail} }
+    { \href{mailto:\myEmail}{\faEnvelope\hspace{0.2mm} \myEmail} }
     | { \href{\myLinkedin}{\faIcon{linkedin}\hspace{0.5mm} nirmalyagh} }
     | { \href{\myGitHub}{\faIcon{github} Nirmalya24} }
     | { \faMapMarker\space Seattle, WA } 
@@ -125,29 +123,22 @@
 \resumeSubHeadingListStart
 \resumeEdu{\color{teal} {Teradata}}{Seattle, WA - Remote}{\color{teal}{Senior Cloud Services Engineer}}{Mar 2026 - Present}
 \resumeItemListStart
-\vspace{-3.5mm}
+\vspace{-2mm}
 
-\item[$\bullet$] \textbf{Architect and lead delivery} of core cloud control-plane services across \textbf{AWS, Azure, and GCP}, driving elastic scalability and on-demand provisioning, and disaster-recovery capabilities for Teradata's managed cloud offerings.
-
-\item[$\bullet$] \textbf{Spearhead cross-cloud Private Service Connect (PSC) automation}, designing subnet allocation strategies and forwarding-rule lifecycle management that reduced manual provisioning effort by over \textbf{60\%}.
-
-\item[$\bullet$] \textbf{Lead fleet-wide OS configuration and certificate distribution} across GCP VM fleets using OS Config Agent and Policy Orchestration, ensuring consistent TLS trust anchors across hundreds of nodes with zero manual intervention.
-
-\item[$\bullet$] \textbf{Design and implement multi-interface networking} on SUSE Linux (SLES) VMs, resolving complex Cloud NAT, route-table, and DNS conflicts in multi-tenant architectures spanning multiple cloud regions.
-
-\item[$\bullet$] \textbf{Define technical direction and mentor} junior and mid-level engineers on Terraform IaC patterns, GCP networking, and secure-by-default infrastructure design principles, improving team velocity and code quality.
-
-\item[$\bullet$] \textbf{Drive cross-team collaboration} with security, platform, and application engineering teams to align infrastructure changes with compliance and operational requirements across multi-cloud environments.
+\item[$\bullet$] \textbf{Architected an end-to-end GCP Private Service Connect (PSC) automation framework} spanning ingress, egress, and interconnect tracks — automating HTTPS load balancer setup, \textbf{Cloud Armor} policy enforcement, TLS certificate issuance via Certificate Manager, and Cisco Valtix egress pipeline; reducing manual provisioning effort by \textbf{60\%}
+\item[$\bullet$] \textbf{Led security hardening of Global DNS Service} following a formal Threat Model review — implemented \textbf{WAF} protections (SQL injection, XSS, command injection), \textbf{Route53} query logging to CloudWatch with automated alarms and SNS escalation, and \textbf{CloudTrail} auditing, delivering full audit visibility and reducing DNS-layer attack exposure
+\item[$\bullet$] \textbf{Designed and launched Azure Kubernetes network infrastructure} from the ground up — built \textbf{Terraform} provisioning for AKS subnets and transit connectivity, containerized the stack with production images in \textbf{JFrog Artifactory}, and developed \textbf{CI/CD pipelines} to automate image creation and publishing to Artifactory
+\item[$\bullet$] \textbf{Drove cross-team unblocking and knowledge transfer} — authored a \textbf{Confluence} onboarding wiki covering architecture, access provisioning, and SDLC workflows; resolved critical Azure/GCP blockers across multiple teams; and contributed to the \textbf{GCP POC} for PSC-based private connectivity for a major customer, enabling a successful proof of concept and paving the way for broader adoption of PSC in our product offerings
 
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 % Cloud Services Engineer
-\vspace{-6mm}
+\vspace{-4mm}
 \resumeSubHeadingListStart
 \resumeEdu{\color{teal} {Teradata}}{Seattle, WA - Remote}{\color{teal}{Cloud Services Engineer}}{Jan 2024 - Mar 2026}
 \resumeItemListStart
-\vspace{-3.5mm}
+\vspace{-2mm}
 
 \item[$\bullet$] Developed and owned the \textbf{Kubernetes}-level, multi-cloud \textbf{Network Service}, delivering essential networking capabilities like \textbf{IP whitelisting}, GCP subnet creation, \textbf{Express Route}, and \textbf{VPN connectivity}.
 
@@ -163,11 +154,11 @@
 \resumeSubHeadingListEnd
 
 % Summer 23 Teradata Internship
-\vspace{-6mm}
+\vspace{-4mm}
 \resumeSubHeadingListStart
 \resumeEdu{\color{teal} {Teradata}}{Seattle, WA - Remote}{\color{teal}{Cloud Software Engineer Intern}}{June 2023 - December 2023}
 \resumeItemListStart
-\vspace{-3.5mm}
+\vspace{-2mm}
 
 \item[$\bullet$] Built a \textbf{Network Performance Evaluation Microservice} for SREs to detect and diagnose network issues, cutting resolution time by \textbf{40\%} and improving operational efficiency by \textbf{30\%}
 \item[$\bullet$] Developed \textbf{AWS Lambda functions} in Python with \textbf{Terraform} to automate VM provisioning across AWS and Azure, reducing manual provisioning time by \textbf{50\%} and human error by \textbf{40\%}
@@ -177,43 +168,13 @@
 \resumeSubHeadingListEnd
 
 % Summer 22 Teradata Internship
-\vspace{-6mm}
+\vspace{-4mm}
 \resumeSubHeadingListStart
 \resumeEdu{\color{teal} {Teradata}}{Seattle, WA - Remote}{\color{teal}{Cloud Software Engineer Intern}}{June 2022 - September 2022}
 \resumeItemListStart
-\vspace{-3.5mm}
+\vspace{-2mm}
 \item[$\bullet$] Built a \textbf{FastAPI} service using \textbf{Boto3} to query AWS Service Quotas and compute utilization metrics, serving as a pre-check gate for customer cloud provisioning
 \item[$\bullet$] Developed automated \textbf{end-to-end API tests} with \textbf{Postman} integrated into \textbf{GitLab CI/CD}, validating functionality, performance, and reliability
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-\vspace{-7mm}
-
-%-----------PROJECTS-----------------
-\section{Personal Projects}
-
-\resumeSubHeadingListStart
-\resumeProject
-{\color{teal} {LetsGoSEA Web Application} 
-| \href{https://5110csi.azurewebsites.net/}{\faIcon{external-link-alt} \hspace{0.5mm} Azure} 
-| \href{https://github.com/zwang4-code/TheCSharpInvestigators} {\faIcon{github}} } {} {ASP.NET, C\#, Razor, Javascript, Bootstrap CSS, NUnit} 
-
-\resumeItemListStart
-\vspace{-1mm}
-\item[$\bullet$] Created a \textbf{full-stack} web application that allows users to explore beautiful Seattle neighborhoods
-\item[$\bullet$] Implemented \textbf{RESTful APIs} with \textbf{CRUD} features including rate, comment, and upload/delete images. 
-\item[$\bullet$] Integrated \textbf{Google Map API} to display neighborhood location. Conducted defensive programming in test-driven development and achieved \textbf{100\% code coverage} 
-\resumeItemListEnd
-\vspace{0mm}
-
-\resumeProject
-{\color{teal} {Maze Runner} 
-| \href{https://github.com/Nirmalya24/maze-runner}{\faIcon{github}} } {} {Python, Socket, Multithreading}
-
-\resumeItemListStart
-\vspace{-1mm}
-\item[$\bullet$] \textbf{Led} development of a multiplayer maze runner game for users to compete against each other to finish a random maze
-\item[$\bullet$] Managed authentication, query handling, and data transfer with \textbf{Socket}, \textbf{TCP/IP, and RPCs}. Implemented multiplayer concurrency using \textbf{thread pool and mutex lock}. 
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -250,7 +211,7 @@
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\vspace{-7mm}
+\vspace{-5mm}
 
 %-----------SKILLS-----------------
 \section{Skills}
